@@ -36,7 +36,7 @@ const SinglePost = () => {
       <div className="card-body mx-5 ">
         <div className="d-flex">
           <h5 className="card-title col-9">{postData.title}</h5>
-          <Link to={"/post/edit/:id"}><button type="button" className="btn btn-outline-info mx-1">Edit</button></Link>
+          <Link to={`/post/edit/${postData.id}`}><button type="button" className="btn btn-outline-info mx-1">Edit</button></Link>
           <Button variant="outline-danger" onClick={handleShow}>
             Delete
           </Button>
