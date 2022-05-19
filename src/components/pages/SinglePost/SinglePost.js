@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button"
 import { removePost } from "../../../redux/postsReducer";
 import { useDispatch } from "react-redux";
 import { Navigate } from "react-router-dom";
-
+import dateToStr from "../../../utils/dateToStr";
 
 const SinglePost = () => {
 
@@ -47,9 +47,9 @@ const SinglePost = () => {
         </div>
         <div className="d-flex ">
           <h6 className="card-subtitle  mt-0">Published:</h6>
-          <small className="font-weight-normal px-1 " >{postData.publishedDate}</small>
+          <small className="font-weight-normal px-1 " >{dateToStr(postData.publishedDate)}</small>
         </div>
-        <p className="card-text">{postData.content}</p>
+        <p dangerouslySetInnerHTML={{ __html: postData.content }} className="card-text" />
       </div>
 
       <Modal show={show} onHide={handleClose}>
