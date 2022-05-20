@@ -28,6 +28,7 @@ const SinglePost = () => {
     dispatch(removePost({ id }))
   }
 
+  console.log(postData);
 
 
   if (!postData) return <Navigate to="/" />
@@ -48,6 +49,10 @@ const SinglePost = () => {
         <div className="d-flex ">
           <h6 className="card-subtitle  mt-0">Published:</h6>
           <small className="font-weight-normal px-1 " >{dateToStr(postData.publishedDate)}</small>
+        </div>
+        <div className="d-flex ">
+          <h6 className="card-subtitle  mt-0">Category:</h6>
+          <small className="font-weight-normal px-1 " >{postData.category}</small>
         </div>
         <p dangerouslySetInnerHTML={{ __html: postData.content }} className="card-text" />
       </div>
