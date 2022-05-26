@@ -1,4 +1,4 @@
-import Post from "../../features/Post/Post";
+import Posts from "../../features/Posts/Posts";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
           <button type="button " className="btn btn-outline-info ">Add post</button>
         </Link>
       </div>
-      <Post></Post>
+      <Posts></Posts>
     </div>
   )
 }

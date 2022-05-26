@@ -22,10 +22,10 @@ const postsReducer = (statePart = [], action) => {
     case REMOVE_POST:
       return statePart.filter(post => (post.id !== action.payload.id))
     case ADD_POST:
-      //console.log('edit');
+      console.log('action',action);
       return [...statePart, { ...action.payload, id: shortid() }]
     case EDIT_POST:
-      console.log('action',action.payload);
+      console.log('action', action.payload);
       return statePart.map(post => (post.id === action.payload.id ? { ...post, ...action.payload } : post));
     default:
       return statePart;

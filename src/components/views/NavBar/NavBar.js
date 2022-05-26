@@ -10,6 +10,7 @@ const NavBar = () => {
           <Nav className="me-auto rounded">
             <Nav.Link as={NavLink} to="/">Home</Nav.Link>
             <Nav.Link as={NavLink} to="/about">About</Nav.Link>
+            <Nav.Link as={NavLink} to="/Categories">Categories</Nav.Link>
           </Nav>
         </Nav>
       </Container>
